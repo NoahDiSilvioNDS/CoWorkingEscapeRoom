@@ -7,6 +7,7 @@
     <title>Escape Room</title>
     <link rel="stylesheet" href="./css/start.css">
     <link rel="stylesheet" href="./css/generic.css">
+    <link rel="stylesheet" href="./css/time.css">
 
     <script type="module" src="./javascript/start.js"></script>
 
@@ -18,6 +19,15 @@
         <h1>Escape Room</h1>
         <button class="start-button">Start</button>
     </div>
+
+    <div class="timer-container">
+        <svg class="timer-ring">
+            <circle class="timer-bg" r="60" cx="75" cy="75" />
+            <circle class="timer-progress" r="60" cx="75" cy="75" />
+        </svg>
+        <div class="timer-label">20:00</div>
+    </div>
+
 </body>
 
 </html>
