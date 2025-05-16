@@ -1,0 +1,11 @@
+/* Fade-out effect op content */
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+/* Blur verwijderen op de achtergrond */
+.unblur {
+    filter: blur(0px);
+    transition: filter 1s ease;
+}
