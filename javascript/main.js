@@ -1,8 +1,35 @@
 const button = document.querySelector(".start-button");
 const content = document.querySelector(".content");
 const background = document.querySelector(".background");
+const timerLabel = document.querySelector(".timer-label");
+const timerProgress = document.querySelector(".timer-progress");
+
+const totalTime = 20 * 60; // 20 minuten in seconden
+let timePassed = 0;
+let timerInterval;
+
+const startTimer = () => {
+    timerInterval = setInterval(() => {
+        timePassed++;
+        const timeLeft = totalTime - timePassed;
+
+        const minutes = Math.floor(timeLeft / 60).toString().padStart(2, '0');
+        const seconds = (timeLeft % 60).toString().padStart(2, '0');
+        timerLabel.textContent = `${minutes}:${seconds}`;
+
+        const progress = 440 - (440 * timePassed) / totalTime;
+        timerProgress.style.strokeDashoffset = progress;
+
+        if (timePassed >= totalTime) {
+            clearInterval(timerInterval);
+            //Davy jumpscare
+        }
+    }, 1000);
+};
 
 button.addEventListener("click", () => {
-    content.classList.add("fade-out");
+    content.classList.add("fade-out", "disabled");
     background.classList.add("unblur");
+
+    setTimeout(startTimer, 1000);
 });
