@@ -13,11 +13,12 @@ html {
 .background {
     background-image: url('../assets/bij_de_eerste_foto_een_laptop_naast_de_boekentas_genereren.png');
     /* Vervang met eigen afbeelding indien gewenst */
-    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    background-size:auto;
+    background-repeat: no-repeat;
     background-position: center;
     filter: blur(8px);
-    height: 100%;
-    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
