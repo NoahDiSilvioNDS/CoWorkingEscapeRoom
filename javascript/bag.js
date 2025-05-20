@@ -1,4 +1,5 @@
 const guess = document.querySelector('#codeBag');
+const background = document.querySelector(".background");
 
 class Bag {
     #codeBag = "flamingo";
@@ -22,7 +23,14 @@ const bag = new Bag();
 guess.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
         bag.guessCode(guess.value.toLowerCase());
-        console.log(guess.value.toLowerCase());
+
+        background.classList.remove('backgroundClass')
+        if (bag.isUnlocked()) {
+            background.classList.add('bagBackground'),
+            background.classList.remove('lockedBagBackground')
+        }else {
+            background.classList.add('lockedBagBackground')
+        }
     }
 });
 

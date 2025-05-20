@@ -14,15 +14,15 @@ const backBag = document.querySelector('.backBag');
 
 backBag.addEventListener("click", () => {
     background.classList.remove('bagBackground'),
-        background.classList.remove('lockedBagBackground'),
-        background.classList.add('backgroundClass')
+    background.classList.remove('lockedBagBackground'),
+    background.classList.add('backgroundClass')
 });
 //back to class from the rules
 const backRules = document.querySelector('.backRules');
 
 backRules.addEventListener("click", () => {
     background.classList.remove('rulesBackground'),
-        background.classList.add('backgroundClass')
+    background.classList.add('bagBackground')
 });
 //back to class from the laptop
 const backLaptop = document.querySelector('.backLaptop');

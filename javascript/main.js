@@ -50,4 +50,4 @@ buttonLaptop.addEventListener("click", () => {
     } else {
         background.classList.add('lockedLaptopBackground')
     }
-})
+});
