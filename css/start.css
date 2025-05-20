@@ -22,7 +22,18 @@ html {
 .bagBackground{
     background-image: url('../assets/Bag.png');
 }
-
+.laptopBackground{
+    background-image: url('../assets/Laptop.png');
+}
+.lockedLaptopBackground{
+    background-image: url('../assets/LockedLaptop.png');
+}
+.lockedLockerBackground{
+    background-color: red;
+}
+.lockedBagBackground{
+    background-color: aqua;
+}
 .background{
     min-height: 100vh;
     width: 100%;

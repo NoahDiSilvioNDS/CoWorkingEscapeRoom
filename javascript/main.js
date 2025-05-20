@@ -11,15 +11,43 @@ button.addEventListener("click", () => {
 });
 
 //functions
+//locker
 const buttonLocker = document.querySelector('.locker');
 
-import { isUnlocked } from './locker.js';
+import { lockerIsUnlocked } from './locker.js';
 
 buttonLocker.addEventListener("click", () => {
-    if (isUnlocked()) {
-        background.classList.remove('backgroundClass'),
+    background.classList.remove('backgroundClass')
+    if (lockerIsUnlocked()) {
         background.classList.add('lockerBackground')
-    }else{
-        
+    } else {
+        background.classList.add('lockedLockerBackground')
     }
 });
+
+//bag
+import { bagIsUnlocked } from './bag.js';
+
+const buttonBag = document.querySelector('.bag');
+
+buttonBag.addEventListener("click", () => {
+    background.classList.remove('backgroundClass')
+    if (bagIsUnlocked()) {
+        background.classList.add('bagBackground')
+    } else {
+        background.classList.add('lockedBagBackground')
+    }
+});
+//laptop
+import { laptopIsUnlocked } from './laptop.js';
+
+const buttonLaptop = document.querySelector('.laptop');
+
+buttonLaptop.addEventListener("click", () => {
+    background.classList.remove('backgroundClass')
+    if (laptopIsUnlocked()) {
+        background.classList.add('laptopBackground')
+    } else {
+        background.classList.add('lockedLaptopBackground')
+    }
+})
