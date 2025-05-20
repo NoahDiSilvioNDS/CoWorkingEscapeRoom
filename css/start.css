@@ -29,10 +29,10 @@ html {
     background-image: url('../assets/LockedLaptop.png');
 }
 .lockedLockerBackground{
-    background-color: red;
+    background-image: url('../assets/LockedLocker.png');
 }
 .lockedBagBackground{
-    background-color: aqua;
+    background-image: url('../assets/LockedBag.png');
 }
 .background{
     min-height: 100vh;

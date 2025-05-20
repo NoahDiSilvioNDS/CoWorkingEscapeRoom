@@ -1,4 +1,5 @@
 const guess = document.querySelector('#codeLaptop');
+const background = document.querySelector(".background");
 
 class Laptop {
     #codePC = 'ILoveBart';
@@ -22,6 +23,13 @@ const laptop = new Laptop();
 guess.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
         laptop.guessCode(guess.value);
+        background.classList.remove('backgroundClass')
+        if (laptop.isUnlocked()) {
+            background.classList.add('laptopBackground'),
+            background.classList.remove('lockedLaptopBackground')
+        }else {
+            background.classList.add('lockedLaptopBackground')
+        }
     }
 });
 
