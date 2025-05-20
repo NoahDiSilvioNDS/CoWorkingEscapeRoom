@@ -1,40 +1,28 @@
 const guess = document.querySelector('#codeBag');
 const background = document.querySelector(".background");
+import { Check } from "./class.js";
 
-class Bag {
-    #codeBag = "flamingo";
-    #gotCode = false;
-    constructor() {
-        this.#codeBag = this.#codeBag;
-    }
-    guessCode(x) {
-        if (this.#codeBag === x) {
-            this.#gotCode = true
-        } else {
-            guess.value = '';
-            return
-        }
-    }
-    isUnlocked() {
-        return this.#gotCode;
-    }
-}
+let bag;
 
-const bag = new Bag();
 guess.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
-        bag.guessCode(guess.value.toLowerCase());
+
+        let input = guess.value.toLowerCase();
+        bag = new Check("flamingo", input);
+
+        bag.guessCode();
 
         background.classList.remove('backgroundClass')
         if (bag.isUnlocked()) {
-            background.classList.add('bagBackground'),
-            background.classList.remove('lockedBagBackground')
-        }else {
-            background.classList.add('lockedBagBackground')
+            background.classList.add('bagBackground');
+            background.classList.remove('lockedBagBackground');
+        } else {
+            background.classList.add('lockedBagBackground');
         }
+        guess.value = '';
     }
 });
 
-export function bagIsUnlocked(){
-    return bag.isUnlocked();
+export function bagIsUnlocked() {
+    return bag ? bag.isUnlocked() : false;
 }
