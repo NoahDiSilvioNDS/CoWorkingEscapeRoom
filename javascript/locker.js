@@ -17,7 +17,6 @@ class Locker {
         return this.#gotCode;
     }
 }
-
 const locker = new Locker();
 guess.addEventListener("keypress", function (event) {
     if (event.key === 'Enter') {
@@ -26,6 +25,6 @@ guess.addEventListener("keypress", function (event) {
     }
 });
 
-export function isUnlocked() {
+export function lockerIsUnlocked() {
     return locker.isUnlocked();
 }
