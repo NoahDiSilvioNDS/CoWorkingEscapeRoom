@@ -11,6 +11,7 @@ class Locker {
         if (this.#codeLocker === x) {
             this.#gotCode = true
         } else {
+            guess.value = '';
             return
         }
     }

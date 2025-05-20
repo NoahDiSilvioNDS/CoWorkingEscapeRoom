@@ -11,6 +11,7 @@ class Laptop {
         if (this.#codePC === x) {
             this.#gotCode = true
         } else {
+            guess.value = '';
             return
         }
     }

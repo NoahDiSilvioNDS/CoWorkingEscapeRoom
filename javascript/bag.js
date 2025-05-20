@@ -11,6 +11,7 @@ class Bag {
         if (this.#codeBag === x) {
             this.#gotCode = true
         } else {
+            guess.value = '';
             return
         }
     }
