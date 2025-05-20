@@ -1,12 +1,31 @@
-const button = document.querySelector('.locker');
-const background = document.querySelector('.background');
-const back = document.querySelector('.backLocker');
+const guess = document.querySelector('#codeLocker');
 
-button.addEventListener("click", () => {
-    background.classList.remove('backgroundClass'),
-        background.classList.add('lockerBackground')
+class Locker {
+    #codeLocker = 5173;
+    #gotCode = false;
+    constructor() {
+        this.#codeLocker = this.#codeLocker;
+    }
+    guessCode(x) {
+        if (this.#codeLocker === x) {
+            this.#gotCode = true
+        } else {
+            return
+        }
+    }
+    isUnlocked() {
+        return this.#gotCode;
+    }
+}
+
+const locker = new Locker();
+guess.addEventListener("keypress", function (event) {
+    if (event.key === 'Enter') {
+        const input = parseInt(guess.value);
+        locker.guessCode(input);
+    }
 });
-back.addEventListener("click", ()=>{
-    background.classList.remove('lockerBackground'),
-    background.classList.add('backgroundClass')
-});
+
+export function isUnlocked() {
+    return locker.isUnlocked();
+}

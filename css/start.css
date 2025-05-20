@@ -44,7 +44,10 @@ html {
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
-
+.back img{
+    height: 2.5rem;
+    width: 2.5rem;
+}
 h1 {
     font-size: 4rem;
     margin-bottom: 40px;
