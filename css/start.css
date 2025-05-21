@@ -20,19 +20,19 @@ html {
     background-image: url('../assets/Rules.png');
 }
 .bagBackground{
-    background-image: url('../assets/Bag.png');
+    background-image: url('../assets/openbag.png');
 }
 .laptopBackground{
-    background-image: url('../assets/Laptop.png');
+    background-image: url('../assets/openlaptop.png');
 }
 .lockedLaptopBackground{
-    background-image: url('../assets/LockedLaptop.png');
+    background-image: url('../assets/closedlaptop.png');
 }
 .lockedLockerBackground{
-    background-image: url('../assets/LockedLocker.png');
+    background-image: url('../assets/lockers.png');
 }
 .lockedBagBackground{
-    background-image: url('../assets/LockedBag.png');
+    background-image: url('../assets/closedbag.png');
 }
 .background{
     min-height: 100vh;
