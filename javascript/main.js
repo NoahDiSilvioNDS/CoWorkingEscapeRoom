@@ -5,6 +5,7 @@ export const background = document.querySelector(".background");
 export const Locker = document.querySelector(".locker img");
 export const Bag = document.querySelector(".bag img");
 export const Laptop = document.querySelector(".laptop img");
+export const Door = document.querySelector(".door img");
 
 import { startTimer } from './timer.js';
 button.addEventListener("click", () => {
@@ -13,6 +14,7 @@ button.addEventListener("click", () => {
     Locker.classList.remove("invisible");
     Bag.classList.remove("invisible");
     Laptop.classList.remove("invisible");
+    Door.classList.remove("invisible");
     setTimeout(startTimer, 1000);
 });
 
@@ -110,4 +112,38 @@ backLaptop.addEventListener("click", ()=>{
     Laptop.classList.remove("invisible");
     inputLaptop.classList.add("invisible");
     backLaptop.classList.add("invisible");
+});
+//door
+import { doorIsUnlocked } from './door.js';
+
+const buttonDoor = document.querySelector('.door');
+const inputDoor = document.querySelector("#codeDoor");
+const backDoor = document.querySelector(".backDoor img");
+
+buttonDoor.addEventListener("click", () => {
+    background.classList.remove('backgroundClass');
+
+    Locker.classList.add("invisible");
+    Bag.classList.add("invisible");
+    Laptop.classList.add("invisible");
+    Door.classList.add("invisible");
+    inputDoor.classList.remove("invisible");
+    backDoor.classList.remove("invisible");
+
+    if (doorIsUnlocked()) {
+        background.classList.add('doorBackground');
+        inputDoor.classList.add("invisible");
+        backDoor.classList.add("invisible");
+    } else {
+        background.classList.add('lockedDoorBackground')
+    }
+});
+
+backDoor.addEventListener("click", ()=>{
+    Locker.classList.remove("invisible");
+    Bag.classList.remove("invisible");
+    Laptop.classList.remove("invisible");
+    Door.classList.remove("invisible");
+    inputDoor.classList.add("invisible");
+    backDoor.classList.add("invisible");
 });

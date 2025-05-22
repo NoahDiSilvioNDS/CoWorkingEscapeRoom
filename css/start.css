@@ -29,6 +29,9 @@ html {
 .laptopBackground {
     background-image: url('../assets/openlaptop.png');
 }
+.doorBackground{
+    background-color: blue;
+}
 
 .lockedLaptopBackground {
     background-image: url('../assets/closedlaptop.png');
@@ -41,7 +44,9 @@ html {
 .lockedBagBackground {
     background-image: url('../assets/closedbag.png');
 }
-
+.lockedDoorBackground{
+    background-color: red;
+}
 .background {
     min-height: 100vh;
     width: 100%;

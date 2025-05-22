@@ -38,3 +38,11 @@ backLaptop.addEventListener("click", () => {
         background.classList.add('backgroundClass'),
         backLaptop.classList.add("invisible");
 });
+//back to class from door
+const backDoor = document.querySelector(".backDoor img");
+
+backDoor.addEventListener("click", ()=>{
+    background.classList.remove("lockedDoorBackground"),
+    background.classList.add("backgroundClass"),
+    backDoor.classList.add("invisible");
+})

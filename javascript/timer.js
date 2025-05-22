@@ -1,7 +1,7 @@
 const timerLabel = document.querySelector(".timer-label");
 const timerProgress = document.querySelector(".timer-progress");
 
-const totalTime = 0.5 * 60; // 20 minuten in seconden
+const totalTime = 20 * 60; // 20 minuten in seconden
 let timePassed = 0;
 let timerInterval;
 
