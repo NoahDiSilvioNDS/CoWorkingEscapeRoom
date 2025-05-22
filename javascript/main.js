@@ -6,6 +6,7 @@ export const Locker = document.querySelector(".locker img");
 export const Bag = document.querySelector(".bag img");
 export const Laptop = document.querySelector(".laptop img");
 export const Door = document.querySelector(".door img");
+export const Beamer = document.querySelector(".beamer img");
 
 import { startTimer } from './timer.js';
 button.addEventListener("click", () => {
@@ -15,25 +16,31 @@ button.addEventListener("click", () => {
     Bag.classList.remove("invisible");
     Laptop.classList.remove("invisible");
     Door.classList.remove("invisible");
+    Beamer.classList.remove("invisible");
     setTimeout(startTimer, 1000);
 });
 
 //functions
 //locker
 const buttonLocker = document.querySelector('.locker');
-const inputLocker = document.querySelector("#codeLocker");
+export const inputLocker = document.querySelector("#codeLocker");
 const backLocker = document.querySelector(".backLocker img");
 import { lockerIsUnlocked } from './locker.js';
 
 buttonLocker.addEventListener("click", () => {
-
+    //achtergrond veranderen
     background.classList.remove('backgroundClass');
+    //andere buttons onzichtbaar maken
     Locker.classList.add("invisible");
     Bag.classList.add("invisible");
     Laptop.classList.add("invisible");
+    Door.classList.add("invisible");
+    Beamer.classList.add("invisible");
+    //input zichtbaar maken
     inputLocker.classList.remove("invisible");
+    //back button zichtbaar maken
     backLocker.classList.remove("invisible");
-
+    //kijken of de code al eens correct is ingevoerd of niet
     if (lockerIsUnlocked()) {
         background.classList.add('lockerBackground');
         inputLocker.classList.add("invisible");
@@ -42,19 +49,11 @@ buttonLocker.addEventListener("click", () => {
     }
 });
 
-backLocker.addEventListener("click", () => {
-    Locker.classList.remove("invisible");
-    Bag.classList.remove("invisible");
-    Laptop.classList.remove("invisible");
-    inputLocker.classList.add("invisible");
-    backLocker.classList.add("invisible");
-});
-
 //bag
 import { bagIsUnlocked } from './bag.js';
 
 const buttonBag = document.querySelector('.bag');
-const inputBag = document.querySelector("#codeBag");
+export const inputBag = document.querySelector("#codeBag");
 const backBag = document.querySelector(".backBag img");
 const buttonRules = document.querySelector(".rules img");
 
@@ -63,7 +62,9 @@ buttonBag.addEventListener("click", () => {
     background.classList.remove('backgroundClass');
     Locker.classList.add("invisible");
     Bag.classList.add("invisible");
+    Door.classList.add("invisible");
     Laptop.classList.add("invisible");
+    Beamer.classList.add("invisible");
     inputBag.classList.remove("invisible");
     backBag.classList.remove("invisible");
     if (bagIsUnlocked()) {
@@ -74,19 +75,11 @@ buttonBag.addEventListener("click", () => {
         background.classList.add('lockedBagBackground')
     }
 });
-
-backBag.addEventListener("click", ()=>{
-    Locker.classList.remove("invisible");
-    Bag.classList.remove("invisible");
-    Laptop.classList.remove("invisible");
-    inputBag.classList.add("invisible");
-    backBag.classList.add("invisible");
-});
 //laptop
 import { laptopIsUnlocked } from './laptop.js';
 
 const buttonLaptop = document.querySelector('.laptop');
-const inputLaptop = document.querySelector("#codeLaptop");
+export const inputLaptop = document.querySelector("#codeLaptop");
 const backLaptop = document.querySelector(".backLaptop img");
 
 buttonLaptop.addEventListener("click", () => {
@@ -95,6 +88,8 @@ buttonLaptop.addEventListener("click", () => {
     Locker.classList.add("invisible");
     Bag.classList.add("invisible");
     Laptop.classList.add("invisible");
+    Door.classList.add("invisible");
+    Beamer.classList.add("invisible");
     inputLaptop.classList.remove("invisible");
     backLaptop.classList.remove("invisible");
 
@@ -105,19 +100,11 @@ buttonLaptop.addEventListener("click", () => {
         background.classList.add('lockedLaptopBackground')
     }
 });
-
-backLaptop.addEventListener("click", ()=>{
-    Locker.classList.remove("invisible");
-    Bag.classList.remove("invisible");
-    Laptop.classList.remove("invisible");
-    inputLaptop.classList.add("invisible");
-    backLaptop.classList.add("invisible");
-});
 //door
 import { doorIsUnlocked } from './door.js';
 
 const buttonDoor = document.querySelector('.door');
-const inputDoor = document.querySelector("#codeDoor");
+export const inputDoor = document.querySelector("#codeDoor");
 const backDoor = document.querySelector(".backDoor img");
 
 buttonDoor.addEventListener("click", () => {
@@ -127,6 +114,8 @@ buttonDoor.addEventListener("click", () => {
     Bag.classList.add("invisible");
     Laptop.classList.add("invisible");
     Door.classList.add("invisible");
+    Beamer.classList.add("invisible");
+
     inputDoor.classList.remove("invisible");
     backDoor.classList.remove("invisible");
 
@@ -139,11 +128,29 @@ buttonDoor.addEventListener("click", () => {
     }
 });
 
-backDoor.addEventListener("click", ()=>{
-    Locker.classList.remove("invisible");
-    Bag.classList.remove("invisible");
-    Laptop.classList.remove("invisible");
-    Door.classList.remove("invisible");
-    inputDoor.classList.add("invisible");
-    backDoor.classList.add("invisible");
+//beamer
+import { beamerIsUnlocked } from './beamer.js';
+
+const buttonBeamer = document.querySelector('.beamer');
+export const inputBeamer = document.querySelector("#codeBeamer");
+const backBeamer = document.querySelector(".backBeamer img");
+
+buttonBeamer.addEventListener("click", () => {
+    background.classList.remove('backgroundClass');
+
+    Locker.classList.add("invisible");
+    Bag.classList.add("invisible");
+    Laptop.classList.add("invisible");
+    Door.classList.add("invisible");
+    Beamer.classList.add("invisible");
+    inputBeamer.classList.remove("invisible");
+    backBeamer.classList.remove("invisible");
+
+    if (beamerIsUnlocked()) {
+        background.classList.add('beamerBackground');
+        inputBeamer.classList.add("invisible");
+        backBeamer.classList.add("invisible");
+    } else {
+        background.classList.add('lockedBeamerBackground')
+    }
 });
