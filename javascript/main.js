@@ -136,21 +136,17 @@ export const inputBeamer = document.querySelector("#codeBeamer");
 const backBeamer = document.querySelector(".backBeamer img");
 
 buttonBeamer.addEventListener("click", () => {
-    background.classList.remove('backgroundClass');
-
-    Locker.classList.add("invisible");
-    Bag.classList.add("invisible");
-    Laptop.classList.add("invisible");
-    Door.classList.add("invisible");
-    Beamer.classList.add("invisible");
-    inputBeamer.classList.remove("invisible");
-    backBeamer.classList.remove("invisible");
-
     if (beamerIsUnlocked()) {
-        background.classList.add('beamerBackground');
-        inputBeamer.classList.add("invisible");
-        backBeamer.classList.add("invisible");
+        buttonBeamer.classList.add("invisible");
     } else {
-        background.classList.add('lockedBeamerBackground')
+        background.classList.remove('backgroundClass');
+        background.classList.add("lockedBeamerBackground");
+        Locker.classList.add("invisible");
+        Bag.classList.add("invisible");
+        Laptop.classList.add("invisible");
+        Door.classList.add("invisible");
+        Beamer.classList.add("invisible");
+        inputBeamer.classList.remove("invisible");
+        backBeamer.classList.remove("invisible");
     }
 });
