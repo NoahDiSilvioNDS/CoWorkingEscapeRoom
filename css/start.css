@@ -112,7 +112,7 @@ h1 {
 }
 
 /* ------------------ */
-
+/*--------------- CLASSROOM SCREEN --------------*/
 .locker {
     position: absolute;
     top: 35%;    
@@ -137,8 +137,31 @@ h1 {
     left: 95%; 
 }
 
+.beamer {
+    position: absolute;
+    top: 10%;    
+    left: 10%; 
+}
 
-.locker img, .bag img, .rules img, .laptop img, .door img {
+
+/*--------------- LAPTOP LOCKSCREEN --------------*/
+.laptoppassw {
+    position: absolute;
+    top: 39.5%;    
+    left: 43%; 
+    width: 13.5rem;
+}
+.backLaptop{
+    position: absolute;
+    top: 25%;    
+    left: 5%; 
+}
+
+
+
+
+/*-----------------------------*/
+.locker img, .bag img, .rules img, .laptop img, .door img, .beamer img {
     width: 3vw;
     height: 3vw;
     cursor: pointer;
