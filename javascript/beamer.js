@@ -16,8 +16,6 @@ guess.addEventListener("keypress", function (event) {
         background.classList.remove('backgroundClass')
 
         if (beamer.isUnlocked()) {
-            background.classList.add('beamerBackground');
-            background.classList.remove('lockedBeamerBackground');
             inputLocker.classList.add("invisible");
         } else {
             background.classList.add('lockedBeamerBackground');

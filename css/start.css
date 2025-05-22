@@ -13,6 +13,9 @@ html {
 .backgroundClass {
     background-image: url('../assets/Classroom.png');
 }
+.backgroundClassRebus{
+    background-image: url('../assets/ClassroomWithRebus.png');
+}
 
 .lockerBackground {
     background-image: url('../assets/Locker.png');
@@ -32,9 +35,6 @@ html {
 .doorBackground{
     background-color: blue;
 }
-.beamerBackground{
-    background-color: brown;
-}
 .lockedLaptopBackground {
     background-image: url('../assets/closedlaptop.png');
 }
@@ -50,7 +50,7 @@ html {
     background-color: red;
 }
 .lockedBeamerBackground{
-    background-color: yellow;
+    background-image: url("../assets/Beamer.png");
 }
 .background {
     position: fixed;

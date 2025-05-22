@@ -77,12 +77,12 @@ backDoor.addEventListener("click", () => {
 });
 //back to class from beamer
 import { inputBeamer } from "./main.js";
+import { beamerIsUnlocked } from "./beamer.js";
 const backBeamer = document.querySelector(".backBeamer img");
-
+const beamer = document.querySelector(".beamer");
 backBeamer.addEventListener("click", ()=>{
     background.classList.remove("lockedBeamerBackground");
     background.classList.remove("beamerBackground");
-    background.classList.add("backgroundClass");
     backBeamer.classList.add("invisible");
     inputBeamer.classList.add("invisible");
     Locker.classList.remove("invisible");
@@ -90,4 +90,10 @@ backBeamer.addEventListener("click", ()=>{
     Laptop.classList.remove("invisible");
     Door.classList.remove("invisible");
     Beamer.classList.remove("invisible");
+    if(beamerIsUnlocked()){
+        background.classList.add("backgroundClassRebus");
+        beamer.classList.add("invisible");
+    }else{
+        background.classList.add("backgroundClass");
+    }
 })
