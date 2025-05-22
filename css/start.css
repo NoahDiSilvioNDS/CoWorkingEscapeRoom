@@ -184,6 +184,17 @@ h1 {
     left: 5%; 
 }
 
+.rules{
+    position: absolute;
+    top: 35%;    
+    left: 50%; 
+}
+.backRules{
+    position: absolute;
+    top: 25%;    
+    left: 5%; 
+}
+
 /*--------------- DOOR--------------*/
 .Doorpassw {
     position: absolute;
