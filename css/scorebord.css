@@ -1,0 +1,35 @@
+.scoreboard {
+    background: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 300px;
+    margin-top: 2rem;
+}
+
+.scoreboard h2 {
+    text-align: center;
+}
+
+.score-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+}
+
+.score-form input {
+    width: 70px;
+}
+
+.scoreboard table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.scoreboard th, .scoreboard td {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    text-align: center;
+}
