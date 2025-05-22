@@ -1,5 +1,5 @@
 const guess = document.querySelector('#codeBeamer');
-import { background, Locker, Bag, Door, Laptop } from "./main.js";
+import { background, Locker, Bag, Door, Laptop, Beamer } from "./main.js";
 import { Check } from "./class.js";
 
 let beamer;
@@ -24,8 +24,7 @@ guess.addEventListener("keypress", function (event) {
             Bag.classList.remove("invisible");
             Laptop.classList.remove("invisible");
             Door.classList.remove("invisible");
-            Beamer.classList.remove("invisible");
-            console.log("WOOP WOOP");
+            Beamer.classList.add("invisible");
         } else {
             background.classList.add('lockedBeamerBackground');
         }
