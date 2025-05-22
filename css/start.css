@@ -147,6 +147,7 @@ h1 {
 }
 
 
+
 /*--------------- LAPTOP  --------------*/
 .laptoppassw {
     position: absolute;
@@ -172,6 +173,30 @@ h1 {
     position: absolute;
     top: 25%;    
     left: 5%; 
+}
+
+.link1{
+    position: absolute;
+    top: 61%;    
+    left: 30%; 
+}
+
+.link2{
+    position: absolute;
+    top: 68%;    
+    left: 35%; 
+}
+
+.link3{
+    position: absolute;
+    top: 75%;    
+    left: 32%; 
+}
+
+.link4{
+    position: absolute;
+    top: 81%;    
+    left: 40%; 
 }
 
 /*--------------- BACKPACK --------------*/
