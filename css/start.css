@@ -33,7 +33,7 @@ html {
     background-image: url('../assets/openlaptop.png');
 }
 .doorBackground{
-    background-color: blue;
+    background-image:url('../assets/opendeur.png');
 }
 .lockedLaptopBackground {
     background-image: url('../assets/closedlaptop.png');
@@ -47,7 +47,7 @@ html {
     background-image: url('../assets/closedbag.png');
 }
 .lockedDoorBackground{
-    background-color: red;
+    background-image:url('../assets/geslotendeur.png');
 }
 .lockedBeamerBackground{
     background-image: url("../assets/Beamer.png");
@@ -139,8 +139,8 @@ h1 {
 
 .beamer {
     position: absolute;
-    top: 5%;    
-    left: 50%; 
+    top: 3%;    
+    left: 40%; 
 }
 
 
