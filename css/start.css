@@ -52,6 +52,9 @@ html {
 .lockedBeamerBackground{
     background-image: url("../assets/Beamer.png");
 }
+.felicitation{
+    background-image: url("../assets/felicitation.png");
+}
 .background {
     position: fixed;
     top: 0;

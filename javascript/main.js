@@ -9,6 +9,8 @@ export const Door = document.querySelector(".door img");
 export const Beamer = document.querySelector(".beamer img");
 
 import { startTimer } from './timer.js';
+import { beamerIsUnlocked } from './beamer.js';
+
 button.addEventListener("click", () => {
     content.classList.add("fade-out", "disabled");
     background.classList.add("unblur");
@@ -119,24 +121,29 @@ buttonDoor.addEventListener("click", () => {
     inputDoor.classList.remove("invisible");
     backDoor.classList.remove("invisible");
 
+    background.classList.add("lockedDoorBackground");
+    inputDoor.classList.remove("invisible");
+    backDoor.classList.remove("invisible");
     if (doorIsUnlocked()) {
+        console.log("Door is unlocked, checking other items...");
         // Deur is ontgrendeld
         if (beamerIsUnlocked() && laptopIsUnlocked() && bagIsUnlocked() && lockerIsUnlocked()) {
             background.classList.add('felicitation');
             inputDoor.classList.add("invisible");
+            console.log("nice");
         } else {
             background.classList.add('doorBackground');
             backDoor.classList.remove('invisible');
             inputDoor.classList.add("invisible");
+            console.log("WOW");
         }
     } else {
         background.classList.add('lockedDoorBackground');
-
     }
 });
 
 //beamer
-import { beamerIsUnlocked } from './beamer.js';
+
 
 const buttonBeamer = document.querySelector('.beamer');
 export const inputBeamer = document.querySelector("#codeBeamer");
