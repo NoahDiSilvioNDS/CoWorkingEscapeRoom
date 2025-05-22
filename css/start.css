@@ -48,15 +48,15 @@ html {
     background-color: red;
 }
 .background {
-    min-height: 100vh;
-    width: 100%;
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    filter: blur(8px);
     position: fixed;
     top: 0;
     left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(8px);
     z-index: -1;
 }
 
@@ -104,4 +104,38 @@ h1 {
 }
 .DAVYREN{
     background-image: url('../assets/Davy.png');
+}
+
+/* ------------------ */
+
+.locker {
+    position: absolute;
+    top: 35%;    
+    right: 19%; 
+}
+
+.laptop {
+    position: absolute;
+    top: 50%;    
+    left: 50%; 
+}
+
+.bag {
+    position: absolute;
+    top: 50%;    
+    left: 66%; 
+}
+
+.door {
+    position: absolute;
+    top: 55%;    
+    left: 95%; 
+}
+
+
+.locker img, .bag img, .rules img, .laptop img, .door img {
+    width: 3vw;
+    height: 3vw;
+    cursor: pointer;
+    transition: transform 0.2s ease;
 }
