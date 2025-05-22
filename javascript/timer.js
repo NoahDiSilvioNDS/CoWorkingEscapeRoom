@@ -1,3 +1,5 @@
+export let timeLeftAtEnd = 0;
+
 const timerLabel = document.querySelector(".timer-label");
 const timerProgress = document.querySelector(".timer-progress");
 
@@ -25,6 +27,8 @@ export const startTimer = () => {
             Locker.classList.add("invisible");
             Bag.classList.add("invisible");
             Laptop.classList.add("invisible");
+        } else {
+            timeLeftAtEnd = timeLeft; // ← dit toevoegen
         }
     }, 1000);
 };
