@@ -84,6 +84,7 @@ const backDoor = document.querySelector(".backDoor img");
 
 backDoor.addEventListener("click", () => {
     background.classList.remove("lockedDoorBackground");
+    background.classList.remove("doorBackground");
     background.classList.add("backgroundClass");
     backDoor.classList.add("invisible");
     inputDoor.classList.add("invisible");

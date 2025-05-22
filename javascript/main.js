@@ -118,16 +118,20 @@ buttonDoor.addEventListener("click", () => {
 
     inputDoor.classList.remove("invisible");
     backDoor.classList.remove("invisible");
+  
+    if (doorIsUnlocked()) {
+        // Deur is ontgrendeld
+        if (beamerIsUnlocked() && laptopIsUnlocked() && bagIsUnlocked() && lockerIsUnlocked()) {
+            background.classList.add('felicitation');
+            inputDoor.classList.add("invisible");
+        } else {
+            background.classList.add('doorBackground');
+            backDoor.classList.remove('invisible');
+            inputDoor.classList.add("invisible");
+        }
+    } else {
+        background.classList.add('lockedDoorBackground');
 
-    if (doorIsUnlocked() && !beamerIsUnlocked() || !laptopIsUnlocked() || !bagIsUnlocked() || !lockerIsUnlocked()) {
-        background.classList.add('doorBackground');
-        inputDoor.classList.add("invisible");
-        backDoor.classList.add("invisible");
-    } else if (!doorIsUnlocked()) {
-        background.classList.add('lockedDoorBackground')
-    }else{
-        background.classList.add("felicitation");
-    }
 });
 
 //beamer

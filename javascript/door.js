@@ -21,7 +21,6 @@ guess.addEventListener("keypress", function (event) {
             background.classList.add('doorBackground');
             background.classList.remove('lockedDoorBackground');
             inputDoor.classList.add("invisible");
-            backDoor.classList.add("invisible");
 
             const name = document.querySelector('#playerName')?.value || 'Onbekend';
             const score = timeLeftAtEnd;
