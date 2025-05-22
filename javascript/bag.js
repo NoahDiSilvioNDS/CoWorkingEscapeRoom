@@ -4,6 +4,7 @@ import { Check } from "./class.js";
 
 let bag;
 const inputBag = document.querySelector("#codeBag");
+const buttonRules = document.querySelector(".rules img");
 
 guess.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
@@ -18,6 +19,7 @@ guess.addEventListener("keypress", function (event) {
             background.classList.add('bagBackground');
             background.classList.remove('lockedBagBackground');
             inputBag.classList.add("invisible");
+            buttonRules.classList.remove("invisible");
         } else {
             background.classList.add('lockedBagBackground');
         }

@@ -119,12 +119,14 @@ buttonDoor.addEventListener("click", () => {
     inputDoor.classList.remove("invisible");
     backDoor.classList.remove("invisible");
 
-    if (doorIsUnlocked()) {
+    if (doorIsUnlocked() && !beamerIsUnlocked() || !laptopIsUnlocked() || !bagIsUnlocked() || !lockerIsUnlocked()) {
         background.classList.add('doorBackground');
         inputDoor.classList.add("invisible");
         backDoor.classList.add("invisible");
-    } else {
+    } else if (!doorIsUnlocked()) {
         background.classList.add('lockedDoorBackground')
+    }else{
+        background.classList.add("felicitation");
     }
 });
 
