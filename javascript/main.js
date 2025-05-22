@@ -28,7 +28,7 @@ const buttonLocker = document.querySelector('.locker');
 export const inputLocker = document.querySelector("#codeLocker");
 const backLocker = document.querySelector(".backLocker img");
 import { lockerIsUnlocked } from './locker.js';
-
+const linken = document.querySelector(".linken");
 buttonLocker.addEventListener("click", () => {
     //achtergrond veranderen
     background.classList.remove('backgroundClass');
@@ -46,6 +46,7 @@ buttonLocker.addEventListener("click", () => {
     if (lockerIsUnlocked()) {
         background.classList.add('lockerBackground');
         inputLocker.classList.add("invisible");
+        linken.classList.remove("invisible");
     } else {
         background.classList.add('lockedLockerBackground');
     }
@@ -130,12 +131,10 @@ buttonDoor.addEventListener("click", () => {
         if (beamerIsUnlocked() && laptopIsUnlocked() && bagIsUnlocked() && lockerIsUnlocked()) {
             background.classList.add('felicitation');
             inputDoor.classList.add("invisible");
-            console.log("nice");
         } else {
             background.classList.add('doorBackground');
             backDoor.classList.remove('invisible');
             inputDoor.classList.add("invisible");
-            console.log("WOW");
         }
     } else {
         background.classList.add('lockedDoorBackground');

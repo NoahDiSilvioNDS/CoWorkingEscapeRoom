@@ -3,7 +3,7 @@ import { background, Locker, Bag, Laptop, Door, Beamer } from "./main.js";
 //back to class from the locker
 import { inputLocker } from "./main.js";
 const backLocker = document.querySelector('.backLocker img');
-
+const linken = document.querySelector(".linken");
 backLocker.addEventListener("click", () => {
     background.classList.remove('lockerBackground');
     background.classList.remove('lockedLockerBackground');
@@ -14,6 +14,7 @@ backLocker.addEventListener("click", () => {
     Bag.classList.remove("invisible");
     Laptop.classList.remove("invisible");
     Door.classList.remove("invisible");
+    linken.classList.add("invisible");
     if (beamerIsUnlocked()) {
         background.classList.add("backgroundClassRebus");
         beamer.classList.add("invisible");
