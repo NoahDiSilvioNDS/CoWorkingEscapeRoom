@@ -116,19 +116,19 @@ h1 {
 .locker {
     position: absolute;
     top: 35%;    
-    right: 19%; 
+    right: 22%; 
 }
 
 .laptop {
     position: absolute;
     top: 50%;    
-    left: 50%; 
+    left: 48%; 
 }
 
 .bag {
     position: absolute;
     top: 50%;    
-    left: 66%; 
+    left: 64%; 
 }
 
 .door {
@@ -199,7 +199,7 @@ h1 {
 .Doorpassw {
     position: absolute;
     top: 60%;    
-    left: 45%; 
+    left: 40%; 
     width: 14.5rem;
 }
 .backDoor{
@@ -211,9 +211,9 @@ h1 {
 /*--------------- BEAMER --------------*/
 .Beamerpassw {
     position: absolute;
-    top: 60%;    
-    left: 45%; 
-    width: 14.5rem;
+    top: 73%;    
+    left: 58%; 
+    width: 17.8rem;
 }
 .backBeamer{
     position: absolute;
