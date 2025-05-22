@@ -118,7 +118,7 @@ buttonDoor.addEventListener("click", () => {
 
     inputDoor.classList.remove("invisible");
     backDoor.classList.remove("invisible");
-  
+
     if (doorIsUnlocked()) {
         // Deur is ontgrendeld
         if (beamerIsUnlocked() && laptopIsUnlocked() && bagIsUnlocked() && lockerIsUnlocked()) {
@@ -132,6 +132,7 @@ buttonDoor.addEventListener("click", () => {
     } else {
         background.classList.add('lockedDoorBackground');
 
+    }
 });
 
 //beamer
