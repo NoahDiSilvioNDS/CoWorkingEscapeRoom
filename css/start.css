@@ -32,7 +32,9 @@ html {
 .doorBackground{
     background-color: blue;
 }
-
+.beamerBackground{
+    background-color: brown;
+}
 .lockedLaptopBackground {
     background-image: url('../assets/closedlaptop.png');
 }
@@ -46,6 +48,9 @@ html {
 }
 .lockedDoorBackground{
     background-color: red;
+}
+.lockedBeamerBackground{
+    background-color: yellow;
 }
 .background {
     position: fixed;
