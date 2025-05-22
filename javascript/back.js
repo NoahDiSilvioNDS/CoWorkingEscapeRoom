@@ -82,7 +82,6 @@ const backBeamer = document.querySelector(".backBeamer img");
 const beamer = document.querySelector(".beamer");
 backBeamer.addEventListener("click", ()=>{
     background.classList.remove("lockedBeamerBackground");
-    background.classList.remove("beamerBackground");
     backBeamer.classList.add("invisible");
     inputBeamer.classList.add("invisible");
     Locker.classList.remove("invisible");
