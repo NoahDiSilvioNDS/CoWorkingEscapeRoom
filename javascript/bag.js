@@ -1,8 +1,9 @@
 const guess = document.querySelector('#codeBag');
-const background = document.querySelector(".background");
+import { background } from "./main.js";
 import { Check } from "./class.js";
 
 let bag;
+const inputBag = document.querySelector("#codeBag");
 
 guess.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
@@ -16,6 +17,7 @@ guess.addEventListener("keypress", function (event) {
         if (bag.isUnlocked()) {
             background.classList.add('bagBackground');
             background.classList.remove('lockedBagBackground');
+            inputBag.classList.add("invisible");
         } else {
             background.classList.add('lockedBagBackground');
         }
