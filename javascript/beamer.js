@@ -9,7 +9,7 @@ guess.addEventListener("keypress", function (event) {
     if (event.key === 'Enter') {
 
         let input = parseInt(guess.value);
-        beamer = new Check(8080, input);
+        beamer = new Check(404, input);
 
         beamer.guessCode();
 

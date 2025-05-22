@@ -14,7 +14,13 @@ backLocker.addEventListener("click", () => {
     Bag.classList.remove("invisible");
     Laptop.classList.remove("invisible");
     Door.classList.remove("invisible");
-    Beamer.classList.remove("invisible");
+    if (beamerIsUnlocked()) {
+        background.classList.add("backgroundClassRebus");
+        beamer.classList.add("invisible");
+    } else {
+        background.classList.add("backgroundClass");
+        Beamer.classList.remove("invisible");
+    }
 });
 
 //back to class from the bag
@@ -33,7 +39,13 @@ backBag.addEventListener("click", () => {
     Bag.classList.remove("invisible");
     Laptop.classList.remove("invisible");
     Door.classList.remove("invisible");
-    Beamer.classList.remove("invisible");
+    if (beamerIsUnlocked()) {
+        background.classList.add("backgroundClassRebus");
+        Beamer.classList.add("invisible");
+    } else {
+        background.classList.add("backgroundClass");
+        Beamer.classList.remove("invisible");
+    }
 });
 //back to bag from the rules
 const backRules = document.querySelector('.backRules img');
@@ -58,7 +70,13 @@ backLaptop.addEventListener("click", () => {
     Bag.classList.remove("invisible");
     Laptop.classList.remove("invisible");
     Door.classList.remove("invisible");
-    Beamer.classList.remove("invisible");
+    if (beamerIsUnlocked()) {
+        background.classList.add("backgroundClassRebus");
+        Beamer.classList.add("invisible");
+    } else {
+        background.classList.add("backgroundClass");
+        Beamer.classList.remove("invisible");
+    }
 });
 //back to class from door
 import { inputDoor } from "./main.js";
@@ -73,14 +91,21 @@ backDoor.addEventListener("click", () => {
     Bag.classList.remove("invisible");
     Laptop.classList.remove("invisible");
     Door.classList.remove("invisible");
-    Beamer.classList.remove("invisible");
+    if (beamerIsUnlocked()) {
+        background.classList.add("backgroundClassRebus");
+        Beamer.classList.add("invisible");
+    } else {
+        background.classList.add("backgroundClass");
+        Beamer.classList.remove("invisible");
+    }
 });
+
 //back to class from beamer
 import { inputBeamer } from "./main.js";
 import { beamerIsUnlocked } from "./beamer.js";
 const backBeamer = document.querySelector(".backBeamer img");
 const beamer = document.querySelector(".beamer");
-backBeamer.addEventListener("click", ()=>{
+backBeamer.addEventListener("click", () => {
     background.classList.remove("lockedBeamerBackground");
     backBeamer.classList.add("invisible");
     inputBeamer.classList.add("invisible");
@@ -89,10 +114,10 @@ backBeamer.addEventListener("click", ()=>{
     Laptop.classList.remove("invisible");
     Door.classList.remove("invisible");
     Beamer.classList.remove("invisible");
-    if(beamerIsUnlocked()){
+    if (beamerIsUnlocked()) {
         background.classList.add("backgroundClassRebus");
         beamer.classList.add("invisible");
-    }else{
+    } else {
         background.classList.add("backgroundClass");
     }
-})
+});
