@@ -5,6 +5,8 @@ const totalTime = 20 * 60; // 20 minuten in seconden
 let timePassed = 0;
 let timerInterval;
 
+import { background, Locker, Bag, Laptop } from "./main.js";
+
 export const startTimer = () => {
     timerInterval = setInterval(() => {
         timePassed++;
@@ -19,7 +21,10 @@ export const startTimer = () => {
 
         if (timePassed >= totalTime) {
             clearInterval(timerInterval);
-            //Davy jumpscare
+            background.classList.add("DAVYREN");
+            Locker.classList.add("invisible");
+            Bag.classList.add("invisible");
+            Laptop.classList.add("invisible");
         }
     }, 1000);
 };

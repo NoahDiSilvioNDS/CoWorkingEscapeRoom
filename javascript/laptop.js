@@ -1,8 +1,9 @@
 const guess = document.querySelector('#codeLaptop');
-const background = document.querySelector(".background");
+import { background } from "./main.js";
 import { Check } from "./class.js";
 
 let laptop;
+const inputLaptop = document.querySelector("#codeLaptop");
 
 guess.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
@@ -17,6 +18,7 @@ guess.addEventListener("keypress", function (event) {
         if (laptop.isUnlocked()) {
             background.classList.add('laptopBackground');
             background.classList.remove('lockedLaptopBackground');
+            inputLaptop.classList.add("invisible");
         } else {
             background.classList.add('lockedLaptopBackground');
         }
