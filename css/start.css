@@ -1,5 +1,5 @@
 * {
-   margin: 0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -13,31 +13,39 @@ html {
 .backgroundClass {
     background-image: url('../assets/Classroom.png');
 }
-.lockerBackground{
-    background-image: url('../assets/Locker.png');   
+
+.lockerBackground {
+    background-image: url('../assets/Locker.png');
 }
-.rulesBackground{
+
+.rulesBackground {
     background-image: url('../assets/Rules.png');
 }
-.bagBackground{
+
+.bagBackground {
     background-image: url('../assets/openbag.png');
 }
-.laptopBackground{
+
+.laptopBackground {
     background-image: url('../assets/openlaptop.png');
 }
-.lockedLaptopBackground{
+
+.lockedLaptopBackground {
     background-image: url('../assets/closedlaptop.png');
 }
-.lockedLockerBackground{
+
+.lockedLockerBackground {
     background-image: url('../assets/lockers.png');
 }
-.lockedBagBackground{
+
+.lockedBagBackground {
     background-image: url('../assets/closedbag.png');
 }
-.background{
+
+.background {
     min-height: 100vh;
     width: 100%;
-    background-size:auto;
+    background-size: auto;
     background-repeat: no-repeat;
     background-position: center;
     filter: blur(8px);
@@ -46,6 +54,7 @@ html {
     left: 0;
     z-index: -1;
 }
+
 .content {
     height: 100%;
     display: flex;
@@ -55,14 +64,17 @@ html {
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
-.back img{
+
+.back img {
     height: 2.5rem;
     width: 2.5rem;
 }
+
 h1 {
     font-size: 4rem;
     margin-bottom: 40px;
 }
+
 .start-button {
     padding: 15px 30px;
     font-size: 1.2rem;
@@ -81,4 +93,10 @@ h1 {
 .disabled .start-button {
     opacity: 0.5;
     cursor: not-allowed;
+}
+.invisible{
+    display: none;
+}
+.DAVYREN{
+    background-image: url('../assets/Davy.png');
 }
