@@ -6,7 +6,6 @@ import { timeLeftAtEnd } from "./timer.js";
 
 let door;
 const inputDoor = document.querySelector("#codeDoor");
-const backDoor = document.querySelector(".backDoor img");
 guess.addEventListener("keypress", function (event) {
     if (event.key === 'Enter') {
 
