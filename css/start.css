@@ -175,7 +175,9 @@ h1 {
     left: 5%; 
 }
 
-
+.decoration{
+    list-style: none;
+}
 
 .link1{
     position: absolute;
