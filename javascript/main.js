@@ -126,11 +126,10 @@ buttonDoor.addEventListener("click", () => {
     inputDoor.classList.remove("invisible");
     backDoor.classList.remove("invisible");
     if (doorIsUnlocked()) {
-        console.log("Door is unlocked, checking other items...");
-        // Deur is ontgrendeld
         if (beamerIsUnlocked() && laptopIsUnlocked() && bagIsUnlocked() && lockerIsUnlocked()) {
             background.classList.add('felicitation');
             inputDoor.classList.add("invisible");
+            backDoor.classList.add("invisible");
         } else {
             background.classList.add('doorBackground');
             backDoor.classList.remove('invisible');
