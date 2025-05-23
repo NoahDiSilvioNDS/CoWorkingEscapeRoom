@@ -78,6 +78,7 @@ backLaptop.addEventListener("click", () => {
         background.classList.add("backgroundClass");
         Beamer.classList.remove("invisible");
     }
+
 });
 //back to class from door
 import { inputDoor } from "./main.js";
